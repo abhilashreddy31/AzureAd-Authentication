@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script src="https://alcdn.msauth.net/browser/2.18.0/js/msal-browser.min.js"></script>
+</head>
+<body>
+  <script>
+    const msalInstance = new msal.PublicClientApplication(msalConfig);
+
+    msalInstance.handleRedirectPromise().then((authResponse) => {
+      console.log('Authentication successful:', authResponse);
+      
+      // Redirect to the protected page or perform additional actions
+
+    }).catch((error) => {
+      console.log('An error occurred during authentication:', error);
+    });
+  </script>
+</body>
+</html>
